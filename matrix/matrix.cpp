@@ -56,7 +56,7 @@ Matrix<T>& Matrix<T>::operator=(const Matrix<T> &a){
   
 
   if ( a.rows() != this->rows() || a.cols() != this->cols() ){
-    resize(a.rows(),a.cols()) ;
+    this->resize(a.rows(),a.cols()) ;
   }
   
   int sze = this->rows()*this->cols() ;

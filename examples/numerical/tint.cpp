@@ -20,7 +20,7 @@ struct TestFcn : public ClassPO<double> {
   TestFcn(): nf(0) {;}
 };
 
-main()
+void main()
 {
     double  i, err;
     TestFcn f ;

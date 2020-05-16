@@ -31,7 +31,7 @@ Last changed: 2 Feb, 2010
 #include "integrate.h"
 
 #ifdef USING_VCC
-#include <cmalloc>
+#include <malloc.h>
 #endif
 //-------------------------------------------------------------------
 /*!

@@ -53,7 +53,7 @@ template <class T> Vector<T>& Vector<T>::operator=(const Vector<T> &b)
 
   if ( this->n() != b.n())
     {
-      resize(b.n()) ;
+      this->resize(b.n()) ;
     }
 
   this->sze = b.n() ;

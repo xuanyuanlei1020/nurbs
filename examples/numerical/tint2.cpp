@@ -35,7 +35,7 @@ struct G : public ClassPO<double> {
 };
 
 
-main(){
+void main(){
     double  i, err;
     G g ;
     F f ;
