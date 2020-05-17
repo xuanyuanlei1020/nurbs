@@ -358,3 +358,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# My ignore
+/examples/VS2019/tnclosed/*.ps
+/examples/VS2019/tnclosed/*.tiff
+/examples/VS2019/tnclosed/*.tif
+/examples/VS2019/tninterp/*.ps

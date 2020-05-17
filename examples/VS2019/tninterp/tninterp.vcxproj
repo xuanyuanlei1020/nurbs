@@ -44,11 +44,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-	<IncludePath>..\..\..\image;..\..\..\include;..\..\..\matrix;..\..\..\numerical;..\..\..\nurbs;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\ImageMagick-7.0.10-Q16\include\;..\..\..\image;..\..\..\include;..\..\..\matrix;..\..\..\numerical;..\..\..\nurbs;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-	<IncludePath>..\..\..\image;..\..\..\include;..\..\..\matrix;..\..\..\numerical;..\..\..\nurbs;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\ImageMagick-7.0.10-Q16\include\;..\..\..\image;..\..\..\include;..\..\..\matrix;..\..\..\numerical;..\..\..\nurbs;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -60,6 +60,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\ImageMagick-7.0.10-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CORE_RL_MagickCore_.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -70,12 +72,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/wd4430 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\ImageMagick-7.0.10-Q16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CORE_RL_MagickCore_.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

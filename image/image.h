@@ -67,8 +67,7 @@ typedef PLib::MatrixImage<double> Image_DOUBLE ;
 typedef PLib::MatrixImage<PLib::Color> Image_Color ;
 
 #ifdef WITH_IMAGE_MAGICK
-
-#include <magick/magick.h>
+#include <Magick++.h>
 #if defined(__cplusplus) || defined(c_plusplus)
 #undef class
 #endif
@@ -107,18 +106,18 @@ namespace PLib{
       int write(const char* filename) ;
       
       //Image processing functions offered by ImageMagick
-      void despeckle() { setImage() ; image=DespeckleImage(image); setMatrix() ;}
-      void emboss() {  setImage() ; image=EmbossImage(image) ; setMatrix() ;}
-      void enhance() {  setImage() ; image=EnhanceImage(image) ; setMatrix() ;}
-      void blur(double b) {  setImage() ; image=BlurImage(image,b) ; setMatrix() ;}
-      void oilPaint(const unsigned int a) { setImage() ; image=OilPaintImage(image,a) ; setMatrix() ;}
+      void despeckle() { setImage() ; image=DespeckleImage(image, nullptr); setMatrix() ;}
+      void emboss() {  setImage() ; image=EmbossImage(image,0,0, nullptr) ; setMatrix() ;}
+      void enhance() {  setImage() ; image=EnhanceImage(image, nullptr) ; setMatrix() ;}
+      void blur(double b) {  setImage() ; image=BlurImage(image,b,b, nullptr) ; setMatrix() ;}
+      void oilPaint(const unsigned int a) { setImage() ; image=OilPaintImage(image,a,a, nullptr) ; setMatrix() ;}
       
       
     protected:
       char* file_name ;
       int autoSave ;
-      Image *image ;
-      ImageInfo image_info ;
+      MagickCore::Image *image ;
+      MagickCore::ImageInfo image_info ;
       
       void setImage() ;
       void setMatrix() ;

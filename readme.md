@@ -28,3 +28,26 @@ Platform Toolset: `Visual Studio 2019 (v142)`
 
 1. Thanks a lot to [chrisidefix](https://github.com/chrisidefix)'s wonderful contribution. Other more information please refer to https://launchpad.net/nurbs++/.
 2. Hopefully, this work will help your job.
+
+
+
+# My notes
+
+## postscript format
+
+postfix is `.ps`, this format can be read and convert by Adobe Acrobat Pro DC or other free postscript decode software, such as [ghostscript](https://www.ghostscript.com/). 
+
+## IMAGE MAGICK
+
+FAILED. 2020-5-17
+
+If you have installed [IMAGE MAGICK](https://imagemagick.org/index.php), you can change `#undef WITH_IMAGE_MAGICK` to `#define WITH_IMAGE_MAGICK` .
+
+IMAGE MAGICK DOWNLOAD LINK: https://imagemagick.org/script/download.php
+
+![ImageMagickInstall](doc_images/ImageMagickInstall.jpg)
+
+
+
+## 
+

@@ -61,7 +61,7 @@ int main(){
 
   cout << "The points are in red.\n" ;
   for(i=0;i<points.n();++i){
-    for(j=-2;j<3;++j){
+    for(int j=-2;j<3;++j){
       int a = (int)points[i].y() ;
       int b = (int)points[i].x() ;
       result(a+j,b) = Color(255,0,0) ;
